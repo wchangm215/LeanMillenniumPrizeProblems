@@ -60,7 +60,8 @@ registry, and their former `sorry` placeholders have been removed.
 
 - **Hodge.** Every `SmoothProjectiveVariety ℂ` in the repository has no complex points, because
   `points` must be in bijection with the plain `Scheme` hom-set `Spec ℂ ⟶ X` and also inject into
-  a finite projective space, so `ClayHodge` is vacuously true. Independently, the cycle-class map
+  a finite projective space, so `ClayHodge` is vacuously true
+  (`Tests/Hodge/StatementIsVacuous.lean`, contributed by Kevin Buzzard). Independently, the cycle-class map
   is free data: setting it to zero preserves every "canonical" anchor, so `ClayHodge` would become
   false as soon as the first defect were repaired (`Tests/Hodge/CycleClassUnconstrained.lean`).
   A faithful statement needs the analytic topology on `X(ℂ)`, a defined Hodge decomposition and

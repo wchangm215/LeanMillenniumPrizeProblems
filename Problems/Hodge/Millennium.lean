@@ -18,7 +18,7 @@ target**.  Two independent defects are machine-checked in `Tests/Hodge/`:
 * every `SmoothProjectiveVariety ℂ` has no complex points at all, because `points` is required to
   be in bijection with the plain `Scheme` hom-set `Spec ℂ ⟶ X` (which has more than continuum many
   elements whenever it is nonempty) and to inject into a finite `ℙ^N(ℂ)`; hence `ClayHodge` is
-  vacuously true (Kevin Buzzard, PR #9);
+  vacuously true (Kevin Buzzard, PR #9; `Tests/Hodge/StatementIsVacuous.lean`);
 * `hodge_subspace` and `cycle_class` are free data: replacing the cycle-class map by `0` preserves
   every "canonical" anchor, so `ClayHodge` forces all even-degree rational cohomology to vanish and
   would become false as soon as the first defect were repaired
