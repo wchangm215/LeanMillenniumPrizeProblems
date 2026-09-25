@@ -732,10 +732,28 @@ theorem IsTrivialZero.riemann_zeta_eq_zero {s : ℂ} (hs : IsTrivialZero s) : ri
 This final theorem records the Riemann Hypothesis target directly. Replace the placeholder proof
 when one is available.
 -/
+/--
+核心缺口（论文第5章 定理5.1 反向证明）：
+若零点集合中存在实部严格大于 1/2 的非平凡零点，
+则相应的指数振荡和无法在全局恒等于零。
+
+数学依据：不同频率的指数振荡在指数增长率上不可抵消。
+本定理在论文中标记为“待证缺口”，对应 Lean 中的 sorry。
+-/
+theorem exponential_oscillation_no_global_cancellation
+    (zeros : Finset ℂ)
+    (h_nonempty : zeros.Nonempty)
+    (h_offcritical : ∃ ρ ∈ zeros, ρ.re > 1 / 2) :
+    ¬ (∀ t : ℝ, ∑ ρ ∈ zeros, (Complex.exp (ρ * t) / ρ) = 0) := by
+  -- 核心待证缺口：不同频率的指数振荡无法全局完全抵消。
+  -- 对应论文第 5 章注 5.1。
+  sorry
 
 /-- Clay Millennium Prize target for the Riemann Hypothesis. -/
 theorem clay_prize_riemann_hypothesis :
     ClayRiemannHypothesis := by
+  -- 千禧年目标。其证明路径依赖上面的核心缺口，
+  -- 缺口未补，故保留 sorry。
   sorry
 
 end Millennium

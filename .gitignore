@@ -23,3 +23,5 @@ tmp/
 
 # Reference PDFs are stored under `Problems/**/references/`.
 *.pdf.sha256
+
+build_log.txt
